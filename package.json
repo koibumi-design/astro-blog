@@ -1,0 +1,20 @@
+{
+  "name": "koibumi-astro-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.2.0",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.1",
+    "astro": "^4.5.2",
+    "@astrojs/check": "^0.5.8",
+    "typescript": "^5.4.2"
+  }
+}

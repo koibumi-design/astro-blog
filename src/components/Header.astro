@@ -1,0 +1,50 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header class="card glass">
+	<nav>
+		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+	</nav>
+</header>
+<style>
+	nav {
+		padding: 0 0.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 90rem;
+		margin: 0 auto;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	header.card.glass {
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	.internal-links {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+	}
+
+	h2 > a {
+		font-weight: bold;
+	}
+
+	h2 > a:hover {
+		text-decoration: none;
+	}
+</style>
