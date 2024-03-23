@@ -2,8 +2,9 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
+import {SITE_TITLE, SITE_DESCRIPTION, GLOBAL_STYLE} from '../consts';
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import {Card, Typo} from '@koibumi-design/solidjs'
 ---
 
 <!doctype html>
@@ -14,19 +15,19 @@ import GitHubIcon from "../components/icons/GitHubIcon.astro";
 <body>
 <Header/>
 <main>
-    <div class="card glass" id="avatar-bio">
+    <Card variant={GLOBAL_STYLE} id="avatar-bio">
         <img src="/avatar.webp" alt="avatar"/>
         <div id="bio">
-            <h2 class="emphasize">
+            <Typo emphasis={true} variant="h2">
                 {SITE_TITLE}
-            </h2>
-            <p>
+            </Typo>
+            <Typo>
                 {SITE_DESCRIPTION}
-            </p>
+            </Typo>
             <div>
-                <p>
+                <Typo variant="h6">
                     Contact me:
-                </p>
+                </Typo>
                 <div id="contact">
                     <a class="icon-link" href="https://github.com/koibumi-design" target="_blank">
                         <GitHubIcon/>
@@ -34,12 +35,13 @@ import GitHubIcon from "../components/icons/GitHubIcon.astro";
                 </div>
             </div>
         </div>
-    </div>
-    <div class="card glass">
-        <h3>
+    </Card>
+
+    <Card variant={GLOBAL_STYLE}>
+        <Typo variant="h3">
             Pinned Posts
-        </h3>
-    </div>
+        </Typo>
+    </Card>
 </main>
 <Footer/>
 </body>
@@ -52,14 +54,11 @@ import GitHubIcon from "../components/icons/GitHubIcon.astro";
         padding: 0 1rem;
     }
 
-    main > .card {
-        width: 100%;
-    }
-
-    main > .card {
+    main > * {
         margin-bottom: 2rem;
     }
-    main > .card:last-child {
+
+    main > *:last-child {
         margin-bottom: 0;
     }
 

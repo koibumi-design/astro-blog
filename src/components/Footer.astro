@@ -1,16 +1,27 @@
 ---
+import {COPYRIGHT_NAME, GLOBAL_STYLE} from "../consts";
+import {Card} from '@koibumi-design/solidjs'
 const today = new Date();
 ---
 
-<footer class="card glass">
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
-</footer>
+<Card
+	variant={GLOBAL_STYLE}
+	id="footer-container"
+>
+	<footer>
+		&copy; {today.getFullYear()} {COPYRIGHT_NAME}. All rights reserved.
+	</footer>
+</Card>
 
 <style>
-	footer.card.glass {
+    #footer-container {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
-		border-bottom: none;
-		height: 100%;
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+	}
+	footer {
+		text-align: center;
 	}
 </style>

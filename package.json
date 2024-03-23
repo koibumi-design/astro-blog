@@ -10,11 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.8",
     "@astrojs/mdx": "^2.2.0",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/solid-js": "^4.0.1",
+    "@koibumi-design/solidjs": "^0.0.6",
     "astro": "^4.5.2",
-    "@astrojs/check": "^0.5.8",
+    "solid-js": "^1.8.16",
     "typescript": "^5.4.2"
   }
 }

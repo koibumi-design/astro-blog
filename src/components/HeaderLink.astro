@@ -1,5 +1,6 @@
 ---
 import type {HTMLAttributes} from 'astro/types';
+import {Button} from '@koibumi-design/solidjs';
 
 type Props = HTMLAttributes<'a'>;
 
@@ -10,22 +11,10 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
-<a href={href} class:list={
-    [
-        className,
-        {
-            "button-solid-primary": isActive
-        },
-        {
-            "button-light-primary": !isActive
-        }
-    ]
-} {...props}>
+<Button
+    variant={isActive ? 'solid' : 'flat'}
+    as="link"
+    href={href}
+>
     <slot/>
-</a>
-
-<style>
-    a:hover {
-        text-decoration: none;
-    }
-</style>
+</Button>
