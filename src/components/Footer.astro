@@ -1,6 +1,6 @@
 ---
 import {COPYRIGHT_NAME, GLOBAL_STYLE} from "../consts";
-import {Card} from '@koibumi-design/solidjs'
+import {Card, Link} from '@koibumi-design/solidjs'
 const today = new Date();
 ---
 
@@ -9,7 +9,8 @@ const today = new Date();
             variant={GLOBAL_STYLE}
             id="footer-container"
     >
-        &copy; {today.getFullYear()}&nbsp;{COPYRIGHT_NAME}. All rights reserved.
+        &copy; {today.getFullYear()}&nbsp;{COPYRIGHT_NAME}. All rights reserved.<br>
+        Powered by <Link href="https://github.com/koibumi-design/astro-blog">Koibumi Design</Link>
     </Card>
 </footer>
 
