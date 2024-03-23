@@ -1,3 +1,55 @@
 ---
+import {Card, Typo, Link} from '@koibumi-design/solidjs'
+import {GLOBAL_STYLE} from "../consts";
+import {ImageInCard} from "./ImageInCard";
+interface Props {
+    slug: string
+    heroImage: string
+    title: string
+    pubDate: Date
+    description: string
+}
 
+const {slug, heroImage, title, pubDate, description} = Astro.props
 ---
+
+<Card
+        class="post-card"
+        variant={GLOBAL_STYLE}
+>
+    <ImageInCard
+            client:only="solid-js"
+            linkTo={`/blog/${slug}`}
+            title={title}
+            image={heroImage}
+    />
+    <Typo variant="h4">
+        <Link href={`/blog/${slug}`}>
+            {title}
+        </Link>
+    </Typo>
+    <Typo>
+        {description}
+    </Typo>
+    <Typo class="date">
+        {pubDate.getFullYear()}-{pubDate.getMonth() + 1}-{pubDate.getDate()}
+    </Typo>
+</Card>
+
+<style lang="scss">
+  @import "../styles/colors.scss";
+
+  .post-card {
+    padding-bottom: 2rem;
+    &>h4 {
+      margin-top: 1rem;
+    }
+  }
+
+  .date {
+    text-align: right;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+</style>

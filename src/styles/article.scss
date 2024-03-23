@@ -1,0 +1,132 @@
+@import "colors";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: #1b1b17;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+blockquote {
+  background-color: rgba($color-slate-50, 0.3);
+  backdrop-filter: blur(18px);
+  padding: 1rem;
+  border-radius: 6px 1rem 1rem 6px;
+  border-left: $color-primary-500 6px solid;
+  box-shadow: 0.125rem 0.125rem 0.5rem rgba($color-slate-700, 0.2);
+}
+
+pre:has(code) {
+  color: $color-slate-50;
+  padding: 1rem 1rem 1rem 2.25rem;
+  border-radius: .5rem;
+  background: $color-slate-800;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary-500;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-slate-900;
+  }
+
+  span:empty {
+    height: 0;
+  }
+}
+
+code:not(:has( > span)) {
+  border-radius: .5rem;
+  padding: 0.125rem 0.25rem;
+  background: $color-slate-100;
+  color: $color-slate-800;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+}
+
+a {
+  color: $color-primary-500;
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: $color-primary-100;
+  }
+}
+
+main {
+  max-width: 70rem;
+  margin: 4rem auto;
+}
+
+li {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+
+  & li {
+    margin-left: 1.5em;
+  }
+}
+
+article {
+  h1, h2, h3, h4, h5, h6, p,
+  ol, ul, blockquote, pre:has(code),
+  math
+  {
+    margin-bottom: .75em;
+    margin-top: .75em;
+  }
+}
+
+

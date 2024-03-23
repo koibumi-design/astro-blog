@@ -10,9 +10,11 @@
 body {
     background: linear-gradient(to right, #ffcdb9, #FFC0CB);
     min-height: 100vh;
-    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
 }
 
-li {
-    margin-left: 2.5rem;
+main {
+    flex-grow: 1;
 }
+

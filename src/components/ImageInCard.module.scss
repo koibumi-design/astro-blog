@@ -1,0 +1,33 @@
+@import "../styles/colors.scss";
+
+.img-container {
+  aspect-ratio: 16/9;
+  overflow: clip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.75rem;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & > * {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  & > *:hover {
+    transform: scale(1.2);
+  }
+
+  &:has(h4) {
+    background-color: rgba($color-slate-100, 0.5);
+  }
+
+  h4 {
+    wrap-option: wrap;
+  }
+}

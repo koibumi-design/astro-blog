@@ -1,49 +1,34 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type {CollectionEntry} from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
+import {Card, Typo} from "@koibumi-design/solidjs"
+import {GLOBAL_STYLE} from "../consts";
+import "../styles/article.scss"
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
+<head>
+    <BaseHead title={title} description={description}/>
+</head>
 
-		</style>
-	</head>
-
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
-					<slot />
-				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
+<body>
+<Header/>
+<main>
+    <Card variant={GLOBAL_STYLE}>
+        <article>
+            <Typo variant="h1" emphasis>
+                {title}
+            </Typo>
+            <slot/>
+        </article>
+    </Card>
+</main>
+<Footer/>
+</body>
 </html>

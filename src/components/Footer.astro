@@ -4,24 +4,22 @@ import {Card} from '@koibumi-design/solidjs'
 const today = new Date();
 ---
 
-<Card
-	variant={GLOBAL_STYLE}
-	id="footer-container"
->
-	<footer>
-		&copy; {today.getFullYear()} {COPYRIGHT_NAME}. All rights reserved.
-	</footer>
-</Card>
+<footer>
+    <Card
+            variant={GLOBAL_STYLE}
+            id="footer-container"
+    >
+        &copy; {today.getFullYear()} {COPYRIGHT_NAME}. All rights reserved.
+    </Card>
+</footer>
 
 <style>
     #footer-container {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-		bottom: 0;
-		position: absolute;
-		width: 100%;
-	}
-	footer {
-		text-align: center;
-	}
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    footer {
+        text-align: center;
+    }
 </style>

@@ -1,0 +1,55 @@
+$color-primary: #c60f6a;
+$color-primary-50: #fae9ee;
+$color-primary-30: lighten($color-primary-50, 2%);
+$color-primary-100: darken($color-primary-50, 5%);
+$color-primary-200: darken($color-primary-100, 10%);
+$color-primary-300: darken($color-primary-200, 10%);
+$color-primary-400: darken($color-primary-300, 10%);
+$color-primary-500: darken($color-primary-400, 10%);
+$color-primary-600: darken($color-primary-500, 10%);
+$color-primary-700: darken($color-primary-600, 10%);
+$color-primary-800: darken($color-primary-700, 10%);
+$color-primary-900: darken($color-primary-800, 10%);
+$color-primary-950: darken($color-primary-900, 5%);
+
+$color-slate-50: #f3f3f1;
+$color-slate-30: lighten($color-slate-50, 2%);
+$color-slate-100: darken($color-slate-50, 5%);
+$color-slate-200: darken($color-slate-100, 10%);
+$color-slate-300: darken($color-slate-200, 10%);
+$color-slate-400: darken($color-slate-300, 10%);
+$color-slate-500: darken($color-slate-400, 10%);
+$color-slate-600: darken($color-slate-500, 10%);
+$color-slate-700: darken($color-slate-600, 10%);
+$color-slate-800: darken($color-slate-700, 10%);
+$color-slate-900: darken($color-slate-800, 10%);
+$color-slate-950: darken($color-slate-900, 5%);
+
+:root {
+  --color-primary: $color-primary;
+  --color-primary-50: $color-primary-50;
+  --color-primary-30: $color-primary-30;
+  --color-primary-100: $color-primary-100;
+  --color-primary-200: $color-primary-200;
+  --color-primary-300: $color-primary-300;
+  --color-primary-400: $color-primary-400;
+  --color-primary-500: $color-primary-500;
+  --color-primary-600: $color-primary-600;
+  --color-primary-700: $color-primary-700;
+  --color-primary-800: $color-primary-800;
+  --color-primary-900: $color-primary-900;
+  --color-primary-950: $color-primary-950;
+
+  --color-slate-50: $color-slate-50;
+  --color-slate-30: $color-slate-30;
+  --color-slate-100: $color-slate-100;
+  --color-slate-200: $color-slate-200;
+  --color-slate-300: $color-slate-300;
+  --color-slate-400: $color-slate-400;
+  --color-slate-500: $color-slate-500;
+  --color-slate-600: $color-slate-600;
+  --color-slate-700: $color-slate-700;
+  --color-slate-800: $color-slate-800;
+  --color-slate-900: $color-slate-900;
+  --color-slate-950: $color-slate-950;
+}

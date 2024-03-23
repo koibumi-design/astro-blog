@@ -21,8 +21,8 @@ dependencies:
     specifier: ^4.0.1
     version: 4.0.1(solid-js@1.8.16)(vite@5.1.6)
   '@koibumi-design/solidjs':
-    specifier: ^0.0.6
-    version: 0.0.6
+    specifier: ^0.0.8
+    version: 0.0.8
   astro:
     specifier: ^4.5.2
     version: 4.5.2(typescript@5.4.2)
@@ -688,8 +688,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@koibumi-design/solidjs@0.0.6:
-    resolution: {integrity: sha512-bohFk7WQMSlslnpDcq1V1zbX9d1LHItc8E2R7VKJvwYNSC4zDM2jSn5IacXk8I6x2LnGwg60RlrbDVlBwkipVA==}
+  /@koibumi-design/solidjs@0.0.8:
+    resolution: {integrity: sha512-TMWOsvvCL3KV/9tdMjJ5wYnQyB1ldwnYfTY+2SVfDrlUcnLgaPv9aKWpNI0e3lMeElpvlB7sipI5U8Z8+cLkXw==}
     dependencies:
       sass: 1.72.0
       solid-js: 1.8.16
