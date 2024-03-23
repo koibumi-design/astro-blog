@@ -2,9 +2,16 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import {SITE_TITLE, SITE_DESCRIPTION, GLOBAL_STYLE} from '../consts';
+import {getCollection} from 'astro:content';
+import {SITE_TITLE, SITE_DESCRIPTION, GLOBAL_STYLE, BIO} from '../consts';
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import {Card, Typo} from '@koibumi-design/solidjs'
+import PostCard from "../components/PostCard.astro";
+
+const posts = (await getCollection('blog'))
+    .filter(post => post.data.pinned)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
 ---
 
 <!doctype html>
@@ -17,12 +24,12 @@ import {Card, Typo} from '@koibumi-design/solidjs'
 <main>
     <Card variant={GLOBAL_STYLE} id="avatar-bio">
         <img src="/avatar.webp" alt="avatar"/>
-        <div id="bio">
+        <section id="bio">
             <Typo emphasis={true} variant="h2">
                 {SITE_TITLE}
             </Typo>
             <Typo>
-                {SITE_DESCRIPTION}
+                {BIO}
             </Typo>
             <div>
                 <Typo variant="h6">
@@ -34,7 +41,7 @@ import {Card, Typo} from '@koibumi-design/solidjs'
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
     </Card>
 
     <Card variant={GLOBAL_STYLE}>
@@ -42,6 +49,14 @@ import {Card, Typo} from '@koibumi-design/solidjs'
             Pinned Posts
         </Typo>
     </Card>
+    <section id="pinned-container">
+        {
+            posts.map((post) => (
+                    <PostCard {...post.data} slug={post.slug}/>
+            ))
+        }
+    </section>
+
 </main>
 <Footer/>
 </body>
@@ -113,5 +128,12 @@ import {Card, Typo} from '@koibumi-design/solidjs'
     .icon-link {
         height: 2rem;
         width: 2rem;
+    }
+
+    #pinned-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+        margin-top: -1.5rem;
     }
 </style>

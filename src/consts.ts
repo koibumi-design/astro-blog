@@ -2,7 +2,9 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Koibumi Blog';
-export const SITE_DESCRIPTION = 'Welcome to my website!\nI write about programming, technology, and other things that interest me.';
+export const SITE_DESCRIPTION = 'A blog about SolidJS, Astro, and koibumi design.';
+
+export const BIO = " Welcome to my website! I write about programming, technology, and other things that interest me."
 
 export const GLOBAL_STYLE: 'quartz' | 'glass' | 'lightGlass' = 'glass'
 

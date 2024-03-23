@@ -15,6 +15,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
     variant={isActive ? 'solid' : 'flat'}
     as="link"
     href={href}
+    {...props}
 >
     <slot/>
 </Button>
