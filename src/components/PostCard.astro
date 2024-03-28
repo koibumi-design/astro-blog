@@ -4,10 +4,10 @@ import {GLOBAL_STYLE} from "../consts";
 import {ImageInCard} from "./ImageInCard";
 interface Props {
     slug: string
-    heroImage: string
+    heroImage?: string
     title: string
     pubDate: Date
-    description: string
+    description?: string
 }
 
 const {slug, heroImage, title, pubDate, description} = Astro.props
