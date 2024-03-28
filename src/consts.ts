@@ -8,4 +8,4 @@ export const BIO = " Welcome to my website! I write about programming, technolog
 
 export const GLOBAL_STYLE: 'quartz' | 'glass' | 'lightGlass' = 'glass'
 
-export const COPYRIGHT_NAME = 'Your Name Here';
+export const COPYRIGHT_NAME = 'Koibumi Design';

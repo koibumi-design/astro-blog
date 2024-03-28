@@ -23,7 +23,7 @@ const posts = (await getCollection('blog'))
 <Header/>
 <main>
     <Card variant={GLOBAL_STYLE} id="avatar-bio">
-        <img src="/avatar.webp" alt="avatar"/>
+        <img src="/avatar.avif" alt="avatar"/>
         <section id="bio">
             <Typo emphasis={true} variant="h2">
                 {SITE_TITLE}
@@ -32,11 +32,13 @@ const posts = (await getCollection('blog'))
                 {BIO}
             </Typo>
             <div>
-                <Typo variant="h6">
-                    Contact me:
+                <Typo>
+                    <strong>
+                        Contact me:
+                    </strong>
                 </Typo>
                 <div id="contact">
-                    <a class="icon-link" href="https://github.com/koibumi-design" target="_blank">
+                    <a class="icon-link" href="https://github.com/koibumi-design" target="_blank" aria-label="GitHub">
                         <GitHubIcon/>
                     </a>
                 </div>

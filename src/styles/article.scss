@@ -107,6 +107,7 @@ a {
 
 main {
   max-width: 70rem;
+  padding: 1rem;
   margin: 4rem auto;
 }
 
@@ -120,6 +121,9 @@ li {
 }
 
 article {
+
+  width: 100%;
+
   h1, h2, h3, h4, h5, h6, p,
   ol, ul, blockquote, pre:has(code),
   math

@@ -1,20 +1,24 @@
 * {
-    padding: 0;
-    margin: 0;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    color: #1b1b17;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: #1b1b17;
 }
 
 body {
-    background: linear-gradient(to right, #ffcdb9, #FFC0CB);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-image: url('/background.webp') , linear-gradient(to right, #ffcdb9, #FFC0CB) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
