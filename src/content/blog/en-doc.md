@@ -134,6 +134,26 @@ body {
 }
 ```
 
+## How to use LaTex in the blog post
+
+Math is rendered using KaTeX. To load that, add css tag in the first line of the markdown file.
+
+```md
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+```
+
+## How to host my blog
+
+For convenience to editing, you can import the repository to your GitHub account. Then, you can deploy it to any free static site hosting service you like.
+
+Recommend free hosting services:
+
+- [Cloudflare Pages](https://pages.cloudflare.com/) 
+- [Vercel](https://vercel.com/) 
+- [Netlify](https://www.netlify.com/) 
+
+A domain is required to use these services.
+
 ## Attribution List
 
 - avatar: [遥かに込めた願いを](https://www.chichi-pui.com/posts/09ed6832-e2eb-4e80-b107-a93d0e55fd33/)
