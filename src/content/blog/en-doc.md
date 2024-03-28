@@ -105,10 +105,37 @@ notCompleted: false
 
 Just create a `.md` file in the `src/content/blog` folder. You can copy the existing file and edit the frontmatter.
 
-If you don't know how to use markdown, you should check the [Markdown Guide](https://www.markdownguide.org/basic-syntax/).
+If you don't know how to use markdown, you should check
+the [Markdown Guide](https://www.markdownguide.org/basic-syntax/).
 
 ### How to add a new page
 
 Create a new `.astro` file in the `src/pages` folder. You can copy the existing file and edit it.
 
 If you want to add the page or external link to the navigation bar, you can edit the `src/components/Header.astro` file.
+
+## How to change a new background
+
+Find `src/styles/global.scss` file and edit the `background-image` property in the `body` selector.
+
+```scss
+body {
+
+  /* Edit the following line */
+  background-image: url('/background.webp'), linear-gradient(to right, #ffcdb9, #FFC0CB);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+```
+
+## Attribution List
+
+- avatar: [遥かに込めた願いを](https://www.chichi-pui.com/posts/09ed6832-e2eb-4e80-b107-a93d0e55fd33/)
+- background: [桜と海中の部屋イラスト素材集](https://www.pixiv.net/artworks/116840824)
+- hero images: [白い花イラスト素材集](https://www.pixiv.net/artworks/117092881)
