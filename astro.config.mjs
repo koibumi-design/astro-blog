@@ -25,5 +25,6 @@ export default defineConfig({
       }
     }
   },
+  site: 'https://astro.koibumi.art/',
   integrations: [mdx(), sitemap(), solidJs()]
 });
