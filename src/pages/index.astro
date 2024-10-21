@@ -3,8 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import {getCollection} from 'astro:content';
+import {SiGithub} from 'solid-icons/si';
 import {SITE_TITLE, SITE_DESCRIPTION, GLOBAL_STYLE, BIO, AVATAR_SRC} from '../consts';
-import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import Card from '@/components/Card.astro';
 import PostCard from "../components/PostCard.astro";
 
@@ -39,7 +39,7 @@ const posts = (await getCollection('blog'))
                 </p>
                 <div id="contact">
                     <a class="icon-link" href="https://github.com/koibumi-design" target="_blank" aria-label="GitHub">
-                        <GitHubIcon/>
+                        <SiGithub size={32} />
                     </a>
                 </div>
             </div>

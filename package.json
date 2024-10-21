@@ -1,7 +1,7 @@
 {
   "name": "koibumi-astro-blog",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
+    "solid-icons": "^1.1.0",
     "solid-js": "^1.8.16",
     "typescript": "^5.4.2"
   }
