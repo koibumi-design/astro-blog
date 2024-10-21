@@ -3,9 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import {getCollection} from 'astro:content';
+import {SiGithub} from 'solid-icons/si';
 import {SITE_TITLE, SITE_DESCRIPTION, GLOBAL_STYLE, BIO, AVATAR_SRC} from '../consts';
-import GitHubIcon from "../components/icons/GitHubIcon.astro";
-import {Card, Typo} from '@koibumi-design/solidjs'
+import Card from '@/components/Card.astro';
 import PostCard from "../components/PostCard.astro";
 
 const posts = (await getCollection('blog'))
@@ -25,21 +25,21 @@ const posts = (await getCollection('blog'))
     <Card variant={GLOBAL_STYLE} id="avatar-bio">
         <img src={AVATAR_SRC} alt="avatar"/>
         <section id="bio">
-            <Typo emphasis={true} variant="h2">
+            <h2 class="emphasize">
                 {SITE_TITLE}
-            </Typo>
-            <Typo>
+            </h2>
+            <p>
                 {BIO}
-            </Typo>
+            </p>
             <div>
-                <Typo>
+                <p>
                     <strong>
                         Contact me:
                     </strong>
-                </Typo>
+                </p>
                 <div id="contact">
                     <a class="icon-link" href="https://github.com/koibumi-design" target="_blank" aria-label="GitHub">
-                        <GitHubIcon/>
+                        <SiGithub size={32} />
                     </a>
                 </div>
             </div>
@@ -47,9 +47,9 @@ const posts = (await getCollection('blog'))
     </Card>
 
     <Card variant={GLOBAL_STYLE}>
-        <Typo variant="h3">
+        <h3>
             Pinned Posts
-        </Typo>
+        </h3>
     </Card>
     <section id="pinned-container">
         {

@@ -3,7 +3,7 @@ import type {CollectionEntry} from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import {Card, Typo} from "@koibumi-design/solidjs"
+import Card from '@/components/Card.astro';
 import {GLOBAL_STYLE} from "../consts";
 import "../styles/article.scss"
 
@@ -22,9 +22,9 @@ const {title, description} = Astro.props;
 <main>
     <Card variant={GLOBAL_STYLE}>
         <article>
-            <Typo variant="h1" emphasis>
+            <h1 class="emphasize">
                 {title}
-            </Typo>
+            </h1>
             <slot/>
         </article>
     </Card>

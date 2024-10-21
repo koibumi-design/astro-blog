@@ -14,8 +14,16 @@ export default defineConfig({
       // Katex plugin options
     }]]
   },
+
   image: {
     service: passthroughImageService()
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '@': '/src'
+      }
+    }
   },
   site: 'https://blog.plr.moe',
   integrations: [mdx(), sitemap(), solidJs()]

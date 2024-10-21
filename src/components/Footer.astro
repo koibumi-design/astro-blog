@@ -1,17 +1,20 @@
 ---
 import {COPYRIGHT_NAME, GLOBAL_STYLE} from "../consts";
-import {Card, Link} from '@koibumi-design/solidjs'
+import "@/styles/components.scss";
+import {clsx} from "clsx";
 const today = new Date();
 ---
 
-<footer>
-    <Card
-            variant={GLOBAL_STYLE}
-            id="footer-container"
-    >
+<footer
+    id="footer-container"
+    class={clsx(
+        "card",
+        GLOBAL_STYLE === 'glass' && 'glass',
+        GLOBAL_STYLE === 'lightGlass' && 'light-glass',
+    )}
+>
         &copy; {today.getFullYear()}&nbsp;{COPYRIGHT_NAME}. All rights reserved.<br>
-        Powered by <Link href="https://github.com/koibumi-design/astro-blog">Koibumi Design</Link>
-    </Card>
+        Powered by <a class="link" href="https://github.com/koibumi-design/astro-blog">Koibumi Design</a>
 </footer>
 
 <style>
