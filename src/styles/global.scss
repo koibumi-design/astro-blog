@@ -1,3 +1,5 @@
+@import "colors";
+
 * {
   padding: 0;
   margin: 0;
@@ -22,3 +24,58 @@ main {
   flex-grow: 1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: #1b1b17;
+
+  &.dark-mode {
+    color: #f8f8f6;
+  }
+
+  &.emphasize {
+    color: $color-primary-500;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5em;
+}

@@ -1,7 +1,9 @@
 ---
-import {Card, Typo, Link} from '@koibumi-design/solidjs'
-import {GLOBAL_STYLE} from "../consts";
-import {ImageInCard} from "./ImageInCard";
+import Card from "./Card.astro";
+import {GLOBAL_STYLE} from "@/consts";
+import "@/styles/components.scss";
+import '@/styles/global.scss';
+
 interface Props {
     slug: string
     heroImage?: string
@@ -11,45 +13,88 @@ interface Props {
 }
 
 const {slug, heroImage, title, pubDate, description} = Astro.props
+
 ---
 
 <Card
-        class="post-card"
-        variant={GLOBAL_STYLE}
+    class="post-card"
+    variant={GLOBAL_STYLE}
 >
-    <ImageInCard
-            client:only="solid-js"
-            linkTo={`/blog/${slug}`}
-            title={title}
-            image={heroImage}
-    />
-    <Typo variant="h4">
-        <Link href={`/blog/${slug}`}>
+    <a
+        class='img-container'
+        href={`/blog/${slug}`}
+    >
+        {
+            heroImage === undefined ?
+                (
+                    <h4 class="emphasize">
+                        {title}
+                    </h4>
+                )
+                : <img src={heroImage} alt={title} loading="lazy"/>
+        }
+    </a>
+    <h4>
+        <a class="link" href={`/blog/${slug}`}>
             {title}
-        </Link>
-    </Typo>
-    <Typo>
+        </a>
+    </h4>
+    <p>
         {description}
-    </Typo>
-    <Typo class="date">
-        {pubDate.getFullYear()}-{pubDate.getMonth() + 1}-{pubDate.getDate()}
-    </Typo>
+    </p>
+    <p class="date">
+        {pubDate.toLocaleDateString()}
+    </p>
 </Card>
 
 <style lang="scss">
-  @import "../styles/colors.scss";
+    @import "../styles/colors.scss";
 
-  .post-card {
-    padding-bottom: 2rem;
-    &>h4 {
-      margin-top: 1rem;
+    .post-card {
+        padding-bottom: 2rem;
+
+        & > h4 {
+            margin-top: 1rem;
+        }
     }
-  }
 
-  .date {
-    text-align: right;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-  }
+    .date {
+        text-align: right;
+        position: absolute;
+        font-size: 0.875rem;
+        bottom: 0.875rem;
+        right: 0.875rem;
+    }
+
+    .img-container {
+        aspect-ratio: 16/9;
+        overflow: clip;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.75rem;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        & > * {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        & > *:hover {
+            transform: scale(1.2);
+        }
+
+        &:has(h4) {
+            background-color: rgba($color-slate-100, 0.5);
+        }
+
+        h4 {
+            wrap-option: wrap;
+        }
+    }
 </style>

@@ -1,17 +1,18 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import {Card, Typo, Link} from "@koibumi-design/solidjs";
+import Card from './Card.astro';
 import {GLOBAL_STYLE, SITE_TITLE} from '../consts';
+import "@/styles/components.scss";
 ---
 
 <Card class="head-container" variant={GLOBAL_STYLE}>
 	<header>
 		<nav>
-			<Typo variant="h1">
-				<Link href="/" id="title">
+			<h1>
+				<a href="/" id="title" class="link">
 					{SITE_TITLE}
-				</Link>
-			</Typo>
+				</a>
+			</h1>
 			<div class="internal-links">
 				<HeaderLink href="/">Home</HeaderLink>
 				<HeaderLink href="/blog">Blog</HeaderLink>
