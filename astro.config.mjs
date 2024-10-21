@@ -25,6 +25,5 @@ export default defineConfig({
       }
     }
   },
-  site: 'https://blog.plr.moe',
   integrations: [mdx(), sitemap(), solidJs()]
 });
