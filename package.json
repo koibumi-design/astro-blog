@@ -22,5 +22,8 @@
     "solid-icons": "^1.1.0",
     "solid-js": "^1.8.16",
     "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.80.3"
   }
 }
