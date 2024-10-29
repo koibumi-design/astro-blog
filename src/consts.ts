@@ -9,7 +9,7 @@ export const FAVICON_SRC = '/favicon.svg';
 
 export const AVATAR_SRC = '/avatar.avif';
 
-export const BIO = " Welcome to my website! I write about programming, technology, and other things that interest me."
+export const BIO = "This is a demo site for Koibumi Astro Theme. Fork this from github and start your own blog!";
 
 export const GLOBAL_STYLE: 'quartz' | 'glass' | 'lightGlass' = 'glass'
 
