@@ -48,7 +48,7 @@ const {slug, heroImage, title, pubDate, description} = Astro.props
 </Card>
 
 <style lang="scss">
-    @import "../styles/colors.scss";
+    @use "../styles/colors.scss";
 
     .post-card {
         padding-bottom: 2rem;
@@ -90,7 +90,7 @@ const {slug, heroImage, title, pubDate, description} = Astro.props
         }
 
         &:has(h4) {
-            background-color: rgba($color-slate-100, 0.5);
+            background-color: rgba(colors.$color-slate-100, 0.5);
         }
 
         h4 {

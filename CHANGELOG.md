@@ -1,3 +1,9 @@
+# 0.2.1
+
+Dec 19, 2024.
+
+Upgrade SCSS syntax.
+
 # 0.2.0
 
 Oct 21, 2024.

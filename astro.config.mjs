@@ -23,6 +23,13 @@ export default defineConfig({
       alias: {
         '@': '/src'
       }
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern'
+        }
+      }
     }
   },
   site: 'https://astro.koibumi.art/',

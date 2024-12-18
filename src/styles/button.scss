@@ -1,4 +1,5 @@
-@import './colors';
+@use "colors";
+@use "sass:color";
 
 @mixin button-common {
   &.link-button {
@@ -39,100 +40,100 @@
 
 .button-solid-primary {
   @include button-common;
-  background-color: $color-primary-500;
-  border-color: $color-primary-500;
-  color: $color-primary-50;
+  background-color: colors.$color-primary-500;
+  border-color: colors.$color-primary-500;
+  color: colors.$color-primary-50;
 
   &:hover {
-    border-color: $color-primary-400;
-    background-color: $color-primary-400;
+    border-color: colors.$color-primary-400;
+    background-color: colors.$color-primary-400;
   }
 }
 
 .button-light-primary {
   @include button-common;
-  background-color: rgba($color-primary-100, 0);
-  border-color: rgba($color-primary-100, 0);
-  color: $color-primary-500;
+  background-color: rgba(colors.$color-primary-100, 0);
+  border-color: rgba(colors.$color-primary-100, 0);
+  color: colors.$color-primary-500;
 
   &:hover {
-    border-color: $color-primary-100;
-    background-color: $color-primary-100;
+    border-color: colors.$color-primary-100;
+    background-color: colors.$color-primary-100;
   }
 
   &.dark-mode {
     &:hover {
-      border-color: $color-primary-700;
-      background-color: $color-primary-700;
+      border-color: colors.$color-primary-700;
+      background-color: colors.$color-primary-700;
     }
   }
 }
 
 .button-outline-primary {
   @include button-common;
-  background-color: rgba($color-primary-50, 0);
-  border-color: $color-primary-500;
-  color: $color-primary-500;
+  background-color: rgba(colors.$color-primary-50, 0);
+  border-color: colors.$color-primary-500;
+  color: colors.$color-primary-500;
 
   &:hover {
-    border-color: $color-primary-300;
-    color: $color-primary-300;
+    border-color: colors.$color-primary-300;
+    color: colors.$color-primary-300;
   }
 
   &.dark-mode {
     &:hover {
-      border-color: $color-primary-700;
-      color: $color-primary-700;
+      border-color: colors.$color-primary-700;
+      color: colors.$color-primary-700;
     }
   }
 }
 
 .button-flat-primary {
   @include button-common;
-  background-color: $color-primary-100;
-  border-color: $color-primary-100;
-  color: $color-primary-500;
+  background-color: colors.$color-primary-100;
+  border-color: colors.$color-primary-100;
+  color: colors.$color-primary-500;
 
   &:hover {
-    color: $color-primary-400;
-    background-color: lighten($color-primary-100, 5%);
-    border-color: lighten($color-primary-100, 5%);
+    color: colors.$color-primary-400;
+    background-color: color.adjust(colors.$color-primary-100, $lightness:5%);
+    border-color: color.adjust(colors.$color-primary-100, $lightness:5%);
   }
 
   &.dark-mode {
-    background-color: $color-primary-700;
-    color: $color-primary-50;
-    border-color: $color-primary-700;
+    background-color: colors.$color-primary-700;
+    color: colors.$color-primary-50;
+    border-color: colors.$color-primary-700;
 
     &:hover {
-      background-color: $color-primary-600;
-      border-color: $color-primary-600;
+      background-color: colors.$color-primary-600;
+      border-color: colors.$color-primary-600;
     }
   }
 }
 
 .button-ghost-primary {
   @include button-common;
-  background-color: rgba($color-primary-500, 0);
-  border-color: $color-primary-500;
-  color: $color-primary-500;
+  background-color: rgba(colors.$color-primary-500, 0);
+  border-color: colors.$color-primary-500;
+  color: colors.$color-primary-500;
 
   &:hover {
-    color: $color-primary-50;
-    background-color: $color-primary-500;
+    color: colors.$color-primary-50;
+    background-color: colors.$color-primary-500;
   }
 }
 
 .button-glow-primary {
   @include button-common;
-  background-color: $color-primary-500;
-  border-color: $color-primary-500;
-  color: $color-primary-50;
-  box-shadow: 0 0.125rem 1rem rgba($color-primary-500, 0.6);
+  background-color: colors.$color-primary-500;
+  border-color: colors.$color-primary-500;
+  color: colors.$color-primary-50;
+  box-shadow: 0 0.125rem 1rem rgba(colors.$color-primary-500, 0.6);
 
   &:hover {
-    border-color: $color-primary-400;
-    background-color: $color-primary-400;
+    border-color: colors.$color-primary-400;
+    background-color: colors.$color-primary-400;
   }
 }
 
@@ -142,7 +143,7 @@
   pointer-events: none;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -2px;
     left: -2px;
@@ -150,13 +151,13 @@
     bottom: 0;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    background-color: rgba($color-slate-50, 0.5);
+    background-color: rgba(colors.$color-slate-50, 0.5);
     border-radius: 0.75rem;
   }
 
   &.dark-mode {
     &::after {
-      background-color: rgba($color-slate-900, 0.5);
+      background-color: rgba(colors.$color-slate-900, 0.5);
     }
   }
 }
