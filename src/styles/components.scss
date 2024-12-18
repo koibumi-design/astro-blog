@@ -1,21 +1,21 @@
-@import "colors";
+@use "colors";
 
 .link {
-  color: $color-primary-500;
+  color: colors.$color-primary-500;
   text-decoration: underline;
   text-underline-offset: 0.1em;
   cursor: pointer;
   transition: background-color 0.25s ease;
 
   &:hover {
-    background-color: $color-primary-100;
+    background-color: colors.$color-primary-100;
   }
 
   &.dark-mode {
-    color: $color-primary-400;
+    color: colors.$color-primary-400;
 
     &:hover {
-      background-color: $color-primary-800;
+      background-color: colors.$color-primary-800;
     }
   }
 }
@@ -24,22 +24,22 @@
 .card {
   padding: 1rem;
   border-radius: 1rem;
-  border: $color-slate-400 1px solid;
-  background-color: $color-slate-30;
-  box-shadow: 0.125rem 0.125rem 0.5rem rgba($color-slate-700, 0.2);
+  border: colors.$color-slate-400 1px solid;
+  background-color: colors.$color-slate-30;
+  box-shadow: 0.125rem 0.125rem 0.5rem rgba(colors.$color-slate-700, 0.2);
 
   &.dark-mode {
-    background-color: $color-slate-800;
-    border-color: $color-slate-900;
-    box-shadow: 0.125rem 0.125rem 0.5rem rgba($color-slate-400, 0.2);
+    background-color: colors.$color-slate-800;
+    border-color: colors.$color-slate-900;
+    box-shadow: 0.125rem 0.125rem 0.5rem rgba(colors.$color-slate-400, 0.2);
 
     &.glass {
-      background-color: rgba($color-slate-700, 0.3);
-      border-color: $color-slate-700;
+      background-color: rgba(colors.$color-slate-700, 0.3);
+      border-color: colors.$color-slate-700;
     }
 
     &.light-glass {
-      background-color: rgba($color-slate-950, 0.1);
+      background-color: rgba(colors.$color-slate-950, 0.1);
     }
 
     &.no-shadow {
@@ -60,15 +60,13 @@
   }
 
   &.glass {
-    background-color: rgba($color-slate-50, 0.3);
+    background-color: rgba(colors.$color-slate-50, 0.3);
     backdrop-filter: blur(18px);
   }
 
   &.light-glass {
-    background-color: rgba($color-slate-50, 0.1);
+    background-color: rgba(colors.$color-slate-50, 0.1);
     backdrop-filter: blur(24px);
     border: none;
   }
 }
-
-
