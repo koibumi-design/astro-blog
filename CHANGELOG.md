@@ -4,6 +4,8 @@ Dec 19, 2024.
 
 Upgrade SCSS syntax.
 
+Update document for fixing mistake.
+
 # 0.2.0
 
 Oct 21, 2024.

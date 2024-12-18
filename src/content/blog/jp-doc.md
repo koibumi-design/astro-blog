@@ -2,7 +2,7 @@
 title: '恋文 Astro Blog ドキュメント'
 description: 'Koibumi Astro Blog の使い方を紹介します（日本語版）'
 pubDate: 'Mar 28 2023'
-heroImage: '/117092881_p3.webp'
+heroImage: 'https://imagedelivery.net/6gszw1iux5BH0bnwjXECTQ/844801b2-f3f6-4c4b-7a59-437f9a0af000/small'
 pinned: true
 ---
 
@@ -71,7 +71,7 @@ export const COPYRIGHT_NAME = 'Koibumi Design';
 </div>
 ```
 
-アイコンを取得するには、[Simple Icons](https://simpleicons.org)ウェブサイトを使用できます。
+こいぶみブログでは、アイコンライブラリとして[solid icon](https://solid-icons.vercel.app/)をデフォルトで使用しています。
 
 ## ブログ投稿のフロントマター
 
@@ -141,7 +141,13 @@ body {
 
 ## ブログをホストする方法
 
-編集の便宜のために、リポジトリをGitHubアカウントにインポートできます。その後、好きな無料の静的サイトホスティングサービスにデプロイできます。
+編集の便宜のために、リポジトリをGitHubアカウントにインポートできます。
+
+![GitHubにインポート](https://imagedelivery.net/6gszw1iux5BH0bnwjXECTQ/66e68dab-9351-4eb2-3141-6a5870801a00/public)
+
+> [githubにインポートする方法](https://docs.github.com/en/migrations/importing-source-code/using-github-importer/importing-a-repository-with-github-importer)
+
+その後、好きな無料の静的サイトホスティングサービスにデプロイできます。
 
 無料ホスティングサービスの推奨：
 
@@ -149,7 +155,7 @@ body {
 - [Vercel](https://vercel.com/)
 - [Netlify](https://www.netlify.com/)
 
-これらのサービスを使用するにはドメインが必要です。
+ドメインは必須ではないが、これらのサービスを利用することを推奨する。
 
 ## 著作権リスト
 

@@ -2,9 +2,8 @@
 title: 'Koibumi Astro Blog Document'
 description: 'Introduce how to use Koibumi Astro Blog (English Version)'
 pubDate: 'Mar 26 2023'
-heroImage: '/117092881_p1.webp'
+heroImage: 'https://imagedelivery.net/6gszw1iux5BH0bnwjXECTQ/a595f6ec-a66f-4de3-3141-a2998e83b500/small'
 pinned: true
-notCompleted: false
 ---
 
 This is a blog template build with [Astro](https://astro.build). It started from the minimal
@@ -75,7 +74,7 @@ Edit this pattern:
 </div>
 ```
 
-To get the icons, you can use the [Simple Icons](https://simpleicons.org) website.
+Koibumi Blog use [solid icon](https://solid-icons.vercel.app/) as icon library by default.
 
 ## Frontmatter of the blog post
 
@@ -144,7 +143,13 @@ Math is rendered using KaTeX. To load that, add css tag in the first line of the
 
 ## How to host my blog
 
-For convenience to editing, you can import the repository to your GitHub account. Then, you can deploy it to any free static site hosting service you like.
+For convenience to editing, you can import the repository to your GitHub account. 
+
+![Import to GitHub](https://imagedelivery.net/6gszw1iux5BH0bnwjXECTQ/66e68dab-9351-4eb2-3141-6a5870801a00/public)
+
+> [how to import repo into github](https://docs.github.com/en/migrations/importing-source-code/using-github-importer/importing-a-repository-with-github-importer)
+
+Then, you can deploy it to any free static site hosting service you like.
 
 Recommend free hosting services:
 
@@ -152,7 +157,7 @@ Recommend free hosting services:
 - [Vercel](https://vercel.com/) 
 - [Netlify](https://www.netlify.com/) 
 
-A domain is required to use these services.
+A domain is not required but suggested to use these services.
 
 ## Attribution List
 

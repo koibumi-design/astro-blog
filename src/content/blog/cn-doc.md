@@ -2,7 +2,7 @@
 title: '恋文 Astro Blog 主题文档'
 description: '介绍如何使用恋文 Astro 主题博客（中文文档）'
 pubDate: 'Mar 27 2023'
-heroImage: '/117092881_p0.webp'
+heroImage: 'https://imagedelivery.net/6gszw1iux5BH0bnwjXECTQ/fc027225-c8ad-4d9b-6fb7-bb10eb990b00/small'
 pinned: true
 ---
 
@@ -71,7 +71,7 @@ export const COPYRIGHT_NAME = 'Koibumi Design';
 </div>
 ```
 
-要获取图标，您可以使用[Simple Icons](https://simpleicons.org)网站。
+Koibumi Blog 默认使用 [solid icon](https://solid-icons.vercel.app/)作为图标库。
 
 ## 博客帖子的前言
 
@@ -141,7 +141,13 @@ body {
 
 ## 如何托管我的博客
 
-为了方便编辑，您可以将仓库导入到您的GitHub账户。然后，您可以将其部署到任何您喜欢的免费静态站点托管服务。
+为了方便编辑，您可以将仓库导入到您的GitHub账户。
+
+![导入到 GitHub](https://imagedelivery.net/6gszw1iux5BH0bnwjXECTQ/66e68dab-9351-4eb2-3141-6a5870801a00/public)
+
+> [如何导入到 GitHub](https://docs.github.com/en/migrations/importing-source-code/using-github-importer/importing-a-repository-with-github-importer)
+
+然后，您可以将其部署到任何您喜欢的免费静态站点托管服务。
 
 推荐免费托管服务：
 
@@ -149,7 +155,7 @@ body {
 - [Vercel](https://vercel.com/)
 - [Netlify](https://www.netlify.com/)
 
-使用这些服务需要一个域名。
+使用这些服务不需要准备域名，但建议使用自己购买的域名。
 
 ## 借物表
 
