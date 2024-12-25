@@ -1,3 +1,11 @@
+# 0.2.2
+
+Dec 25, 2024.
+
+Fix bug: image in post card can be overflowed.
+
+~~Fuck, why I'm coding in Christmas.~~
+
 # 0.2.1
 
 Dec 19, 2024.
